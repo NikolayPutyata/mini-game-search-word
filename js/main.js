@@ -86,10 +86,7 @@ function checkWordFu(event) {
   let isLetterFind = false;
 
   if (userWord.trim() === "") {
-    iziToast.show({
-      title: "Hey",
-      message: "What would you like to add?",
-    });
+    alert("Enter some letter!");
     return;
   }
 
