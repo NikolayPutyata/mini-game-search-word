@@ -297,8 +297,6 @@ function startGameFu(event) {
   const categoryWords = words[selectedCategory];
   const randomWordObj = getRandomWord(categoryWords);
   const randomWord = randomWordObj.word;
-  // const randomWordObj = getRandomWord(words);
-  // const randomWord = randomWordObj.word;
 
   const randomWordinArray = randomWord.split("");
   mainWordArray = randomWordinArray;
