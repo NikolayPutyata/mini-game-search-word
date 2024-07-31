@@ -1,3 +1,5 @@
+import getRandomWord from "./get-random-word.js";
+
 const words = [
   { word: "apple", hint: "A fruit that keeps the doctor away." },
   { word: "chair", hint: "A piece of furniture you sit on." },
@@ -39,7 +41,6 @@ const startButton = document.querySelector(".start-button");
 const form = document.querySelector("#form");
 const container = document.querySelector(".container");
 const hint = document.querySelector(".hint");
-const boxes = document.querySelectorAll(".box");
 const livesCounterHtml = document.querySelector(".lives-span");
 const welcomeDiv = document.querySelector(".welcome-div");
 
@@ -48,12 +49,7 @@ form.addEventListener("submit", checkWordFu);
 
 let mainWordArray = null;
 let livesCounter = 3;
-let userLives = 3;
 
-function getRandomWord(words) {
-  const randomIndex = Math.floor(Math.random() * words.length);
-  return words[randomIndex];
-}
 function startGameFu(event) {
   event.preventDefault();
 
@@ -73,7 +69,10 @@ function startGameFu(event) {
   mainWordArray = randomWordinArray;
 
   const newBoxesHtmlCode = randomWordinArray
-    .map((oneLetter) => `<div class="box">${oneLetter.toUpperCase()}</div>`)
+    .map(
+      (oneLetter) =>
+        `<div class="box no-select">${oneLetter.toUpperCase()}</div>`
+    )
     .join("");
 
   container.insertAdjacentHTML("beforeend", newBoxesHtmlCode);
