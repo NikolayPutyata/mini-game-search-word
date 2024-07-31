@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="welcome-div">
+      <h1>Welcome!</h1>
+      <h2>Rules:</h2>
+      <p>You have 3 lives</p>
+
+      <p>If you don't guess the letter, one life is taken away</p>
+
+      <p>When lives run out the game starts again</p>
+
+      <p>Good Luck!</p>
+    </div>
+    <div class="start-game-div">
+      <button type="button" class="start-button">Start!</button>
+    </div>
+    <form action="form" id="form">
+      <input type="text" id="userInput" maxlength="1" />
+      <button type="submit">Check</button>
+    </form>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+
+    <div class="hint"></div>
+    <div class="lives">Lives:<span class="lives-span"></span></div>
+    <script src="./js.js" type="module"></script>
+  </body>
+</html>
